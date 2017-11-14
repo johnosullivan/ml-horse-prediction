@@ -1,17 +1,12 @@
 
 import numpy as np
-
-X = np.array([[-1, -1], [-2, -1], [1, 1], [2, 1]])
-y = np.array([1, 1, 2, 2])
-
 from sklearn.svm import SVC
+import pandas as pd
 
-clf = SVC()
-clf.fit(X, y)
+df = pd.read_csv('data/training-2016-10-01-2016-12-31.csv')
 
-SVC(C=1.0, cache_size=200, class_weight=None, coef0=0.0,
-    decision_function_shape='ovr', degree=3, gamma='auto', kernel='rbf',
-    max_iter=-1, probability=False, random_state=None, shrinking=True,
-    tol=0.001, verbose=False)
+print(df)
 
-print(clf.predict([[-0.8, -1]]))
+df['finish_pos'] = df['finish_pos'].map(lambda x: 1 if x >= 3 else 0)
+
+print(df)
