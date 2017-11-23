@@ -15,6 +15,7 @@ df=pd.read_csv('data/training-2016-10-01-2016-12-31.csv') #Reads the dataset... 
 
 # print(df.dtypes) #Prints the type of data...
 
+#may have to redo the part below...
 data = df.dropna(subset=['post_pos','offset','post','speed','horse_win','horse_wps','horse_roi','driver_win','driver_wps','driver_roi','trainer_win','trainer_roi','min_races','previous_break','days_since','same_track','same_driver','last_race_res','last_race_wps','last_three_races','purse','finish_pos'])
 data['finish_pos'] = data['finish_pos'].map(lambda x: 1 if x >= 3 else 0) #used the same function as John...
 
@@ -27,6 +28,15 @@ clf_gini=DecisionTreeClassifier(criterion="gini", random_state = 100, max_depth=
 
 clf_gini.fit(X_train, y_train)
 
+clf_entropy=DecisionTreeClassifier(criterion="entropy",random_state=100,max_depth=3,min_samples_leaf=5)#dtree with criterion information gain
+clf_entropy.fit(X_train, y_train)
+
+y_pred = clf_gini.predict(X_test)#predicition for the gini index
+y_pred
+
+y_pred_en = clf_entropy.predict(X_test)
+y_pred_en
+
 #Uncomment this when I get there...
-# print("Accuracy is", accuracy_score(y_test,y_pred)*100) # Prints accuracy score with criterion as gini index
-# print("Accuracy is", accuracy_score(y_test,y_pred_en)*100)#Prints accuracy score with criterion as information gain
+print("Accuracy is", accuracy_score(y_test,y_pred)*100) # Prints accuracy score with criterion as gini index
+print("Accuracy is", accuracy_score(y_test,y_pred_en)*100)#Prints accuracy score with criterion as information gain
