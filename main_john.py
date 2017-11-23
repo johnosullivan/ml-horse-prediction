@@ -20,16 +20,18 @@ y_sk = data[['finish_pos']].values
 
 X_sk = data[['same_track','last_race_res']].values
 
-X_train, X_test, y_train, y_test = train_test_split(X_sk, y_sk, test_size=0.30,train_size=0.70, random_state=1)
+X_train, X_test_dev, y_train, y_test_dev = train_test_split(X_sk, y_sk, test_size=0.30,train_size=0.70, random_state=1)
+
+y_test_dev_reshape = np.reshape(y_test_dev, len(y_test_dev))
+
+X_dev, X_test, y_dev, y_test = train_test_split(X_test_dev, y_test_dev_reshape, test_size=0.30,train_size=0.70, random_state=1)
 
 y_train_reshape = np.reshape(y_train, len(y_train))
-y_test_reshape = np.reshape(y_test, len(y_test))
-
-print(y_train_reshape)
 
 clf = svm.SVC(kernel='poly',C=1.5,random_state=1)
+
 clf.fit(X_train, y_train)
 
 c1 = clf.score(X=X_test,y=y_test)
 
-print(c1)
+print("Accuracy: {0:.0f}%".format(c1 * 100))
