@@ -2,8 +2,8 @@ import numpy as np
 import matplotlib.pyplot as plt
 import seaborn as sns
 import pandas as pd
-from sklearn import svm, metrics, preprocessing
-from sklearn.linear_model import LogisticRegression
+from sklearn import metrics, preprocessing
+from sklearn.neighbors import KNeighborsClassifier
 from sklearn.model_selection import train_test_split
 
 #read in the data file into a pandas dataframe
@@ -35,14 +35,14 @@ X_all = np.array(data.iloc[0:95518, 0:25].values)
 y_all = np.array(data['finish_pos'])
 
 
-X_train, X_dev_test, y_train, y_dev_test = train_test_split(X_all, y_all, test_size=0.30)
+X_train, X_dev_test, y_train, y_dev_test = train_test_split(X_all, y_all, test_size=0.30, random_state=1)
 y_temp = np.reshape(y_dev_test, len(y_dev_test))
-X_test, X_dev, y_test, y_dev = train_test_split(X_dev_test, y_temp, test_size=0.50)
+X_test, X_dev, y_test, y_dev = train_test_split(X_dev_test, y_temp, test_size=0.50, random_state=1)
 
-logreg = LogisticRegression()
-logreg.fit(X_train, y_train)
+knn = KNeighborsClassifier(n_neighbors=3)
+knn.fit(X_train, y_train)
 
-predictions = logreg.predict(X_dev)
-expectations = y_dev
+predictions = knn.predict(X_test)
+expectations = y_test
 
 print(metrics.accuracy_score(expectations, predictions))
