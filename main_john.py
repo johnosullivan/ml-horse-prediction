@@ -3,7 +3,7 @@ import numpy as np
 from sklearn.svm import SVC
 import pandas as pd
 import matplotlib.pyplot as plt
-
+from sklearn.grid_search import GridSearchCV
 from matplotlib.colors import ListedColormap
 from sklearn import preprocessing
 from sklearn.model_selection import train_test_split
@@ -28,7 +28,13 @@ X_dev, X_test, y_dev, y_test = train_test_split(X_test_dev, y_test_dev_reshape, 
 
 y_train_reshape = np.reshape(y_train, len(y_train))
 
-clf = svm.SVC(kernel='poly',C=1.5,random_state=1)
+parameter_candidates = [
+  {'C': [1, 10, 100, 1000], 'kernel': ['poly']},
+]
+
+#clf = GridSearchCV(estimator=svm.SVC(), param_grid=parameter_candidates, n_jobs=-1)
+
+clf = svm.SVC(kernel='poly',C=1.0,random_state=1)
 
 clf.fit(X_train, y_train)
 
