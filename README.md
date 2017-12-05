@@ -15,6 +15,8 @@ Horse raching, once an event only for the elite and royales of society has becom
 
 All features will have a value of 0 or 1, the raw dataset can be found here: <a href="https://github.com/dominicplouffe/HorseRacingPrediction/tree/master/data">Github</a>.
 
+<a href="https://docs.google.com/presentation/d/1mBy5keCI7yhRvQnToHzveEUy8CXaDpChe2sufttldMI/edit?usp=sharing">Google Presentation</a>
+
 | # | Row Name | Description |
 | --- | --- | --- |
 | 1 | Post | If the horse is in the post position 1, 2, 3, 4, or 5 “1” else “0” |
@@ -36,7 +38,6 @@ All features will have a value of 0 or 1, the raw dataset can be found here: <a 
 | 17 | Last Race Result | If the horse finished in first in the previous race, “1” else “0” |
 | 18 | Last Race WPS | If the horse finished in a WPS position in the last race, “1” else “0” |
 | 19 | Last Three Race | If the horse finished in first in the last 3 races, “1” else “0” |
-| 20 | Purse | If the purse is the same as the last race, “0” if it is lower “-1”, else “1” | 
+| 20 | Purse | If the purse is the same as the last race, “0” if it is lower “-1”, else “1” |
 
 ## Our Models
-
