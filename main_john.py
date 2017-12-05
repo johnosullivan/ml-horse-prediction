@@ -8,6 +8,7 @@ from sklearn.grid_search import GridSearchCV
 from sklearn import preprocessing
 from sklearn.cross_validation import train_test_split
 from sklearn import svm
+from sklearn.metrics import f1_score
 # Gets the data from the data folder and convert to datframes
 df = pd.read_csv('data/training-2016-10-01-2016-12-31.csv')
 # Gets the data we would like to use on each column
@@ -43,4 +44,6 @@ clf.fit(X_train, y_train_reshape)
 #print("Best parameters set found on development set:")
 #print(clf.best_params_)
 c1 = clf.score(X=X_test,y=y_test_reshape)
+#y_pred = clf.predict(X_test)
+#print(f1_score(y_test_reshape, y_pred, average='micro'))
 print("Test Accuracy: {0:.0f}%".format(c1 * 100))
