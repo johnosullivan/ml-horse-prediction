@@ -13,13 +13,22 @@ Horse raching, once an event only for the elite and royales of society has becom
 
 ## Prerequisites
 
-Atom is a text and source code editor which works well for macOS, Linux, and Microsoft Windows. Atom is free and can be downloaded from the internet. Once Atom is installed make sure Python works. To get Python on Atom head to preferences, click on install, search for atom-runner and install it. On Windows that’s all that is needed but on Mac there is one more step. Under the Atom menu go to open your config, at the end of your config.csn file add runner: python: “/user/local/bin/python3”.
+Atom is a text and source code editor which works well for macOS, Linux, and Microsoft Windows. Atom is free and can be downloaded from the internet. Once Atom is installed make sure Python works. To get Python running on Atom head to preferences, click on install, search for atom-runner and install it. On Windows that’s all that is needed but on Mac there is one more step. Under the Atom menu go to open your config, at the end of your config.csn file add runner: python: “/user/local/bin/python3”.
 
-Anaconda must also be installed in order to run the second SVC model of our project. Anaconda is a freemium open source distribution of the Python and can be downloaded from the internet. Once Anaconda is installed, use Jupyter notebook to run the code. 
+Anaconda must also be installed in order to run the second SVC model of our project. Anaconda is a freemium open source distribution of Python and can be downloaded from the internet. Once Anaconda is installed, use Jupyter notebook to run the code. 
+
+## Code
+
+To run this code you will need:
+
+* Python 3
+* Scikit-learn
+* Numpy
+* Pandas 
  
-## Models 
+## Goal
 
-The three different models used in this project were K-nearest neighbors, decision tree, and Support Vector Classification.
+The goal was to use three different models from the skilearb library in order to find which models were best in predicting the winning horse of the race.
 
 ## About DataSet
 
@@ -51,3 +60,6 @@ All features will have a value of 0 or 1, the raw dataset can be found here: <a 
 | 20 | Purse | If the purse is the same as the last race, “0” if it is lower “-1”, else “1” |
 
 ## Our Models
+The three different models used in this project were K-nearest neighbors, decision tree, and Support Vector Classification. 
+
+
