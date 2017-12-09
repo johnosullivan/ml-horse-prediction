@@ -13,7 +13,7 @@ Horse raching, once an event only for the elite and royales of society has becom
 
 ## Models 
 
-The three different models used in this project were K-nearest neighbors, decision tree, and Support Vector Classification.
+The three different models used from skilearn library were K-nearest neighbors, decision tree, and Support Vector Classification.
 
 ## About DataSet
 
