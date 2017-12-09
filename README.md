@@ -11,6 +11,12 @@
 
 Horse raching, once an event only for the elite and royales of society has become a everyday day occurance. The ancient Greek Olympics had events for both chariot and mounted horse racing. Since the ancient sport was conceived not much has changed but how bets are placed. Using today's machine learning, our team, <b>bet on us</b>, will be using from models from the skilearn library to determine what are the best features and horses to bet on.
 
+## Prerequisites
+
+Atom is a text and source code editor which works well for macOS, Linux, and Microsoft Windows. Atom is free and can be downloaded from the internet. Once Atom is installed make sure Python works. To get Python on Atom head to preferences, click on install, search for atom-runner and install it. On Windows that’s all that is needed but on Mac there is one more step. Under the Atom menu go to open your config, at the end of your config.csn file add runner: python: “/user/local/bin/python3”.
+
+Anaconda must also be installed in order to run the second SVC model of our project. Anaconda is a freemium open source distribution of the Python and can be downloaded from the internet. Once Anaconda is installed, use Jupyter notebook to run the code. 
+ 
 ## Models 
 
 The three different models used in this project were K-nearest neighbors, decision tree, and Support Vector Classification.
