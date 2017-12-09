@@ -28,7 +28,7 @@ To run this code you will need:
  
 ## Goal
 
-The goal was to use three different models from the skilearb library in order to find which models were best in predicting the winning horse of the race.
+The goal was to use three different models from the skilearb library in order to find which models woekws best in predicting the winning horse of the race.
 
 ## About DataSet
 
