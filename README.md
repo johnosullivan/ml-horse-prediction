@@ -11,6 +11,10 @@
 
 Horse raching, once an event only for the elite and royales of society has become a everyday day occurance. The ancient Greek Olympics had events for both chariot and mounted horse racing. Since the ancient sport was conceived not much has changed but how bets are placed. Using today's machine learning, our team, <b>bet on us</b>, will be using from models from the skilearn library to determine what are the best features and horses to bet on.
 
+## Models 
+
+The three models used in this project were K-nearest neighbors, decision tree, and Support Vector Classification.
+
 ## About DataSet
 
 All features will have a value of 0 or 1, the raw dataset can be found here: <a href="https://github.com/dominicplouffe/HorseRacingPrediction/tree/master/data">Github</a>.
