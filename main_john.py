@@ -1,4 +1,3 @@
-
 # Imported the pandas and numpy
 import numpy as np
 import pandas as pd
@@ -35,6 +34,7 @@ param_grid = [
  {'C': [1, 10, 100, 1000], 'gamma': [0.001, 0.0001], 'kernel': ['rbf']},
 ]
 clfdev = svm.SVC(kernel='poly',C=1.0,random_state=1)
+clfdev = svm.SVC(kernel='poly',C=2.0,random_state=2)
 clfdev.fit(X_train, y_train_reshape)
 c1dev = clfdev.score(X=X_dev,y=y_dev_reshape)
 print("Dev Accuracy: {0:.0f}%".format(c1dev * 100))
