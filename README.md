@@ -29,7 +29,7 @@ Project dependencies required are the following:
 
 ## Goal
 
-The goal was to use three different models from the skilearb library in order to find which models would be best in predicting the winning horse of the race. We used different features thoughout the project to see which features would produced the best results. 
+The goal was to use three different models from the skilearb library in order to find which models would be best in predicting the winning horse of the race. We used different features thoughout the project to see which features would produced the best results.
 
 ## About DataSet
 

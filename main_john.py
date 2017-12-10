@@ -28,7 +28,7 @@ X_dev, X_test, y_dev, y_test = train_test_split(X_test_dev, y_test_dev_reshape, 
 y_train_reshape = np.reshape(y_train, len(y_train))
 y_test_reshape = np.reshape(y_test, len(y_test))
 y_dev_reshape = np.reshape(y_dev, len(y_dev))
-print("Training against the dev dataset/y_label")
+print("Tuning against the dev dataset/y_label")
 param_grid = [
  {'C': [1, 10, 100, 1000], 'kernel': ['linear']},
  {'C': [1, 10, 100, 1000], 'gamma': [0.001, 0.0001], 'kernel': ['rbf']},
@@ -37,6 +37,7 @@ clfdev = svm.SVC(kernel='poly',C=2.0,random_state=2)
 clfdev.fit(X_train, y_train_reshape)
 c1dev = clfdev.score(X=X_dev,y=y_dev_reshape)
 print("Dev Accuracy: {0:.0f}%".format(c1dev * 100))
+print("Testing against best model and hyberparameters")
 clf = svm.SVC(kernel='poly',C=1.0,random_state=1)
 #clf = GridSearchCV(SVC(), param_grid, cv=5)
 clf.fit(X_train, y_train_reshape)
