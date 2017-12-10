@@ -1,3 +1,8 @@
+<p align="center">
+<img src="resources/horse.png">
+</p>
+
+
 # ML Horse Prediction
 
 ## Team Members
