@@ -39,16 +39,17 @@ X_test, X_dev, y_test, y_dev = train_test_split(X_dev_test, y_temp, test_size=0.
 
 """
 use gridsearch for best value for k
-for x in range(3,8):
-    knn = KNeighborsClassifier(n_neighbors=3)
-    knn.fit(X_train, y_train)
+for x in range(3,11):
+    for y in range(1,3):
+        knn = KNeighborsClassifier(n_neighbors=x,p=y)
+        knn.fit(X_train, y_train)
 
-    # predict on development
-    predictions = knn.predict(X_dev)
-    expectations = y_dev
+        # predict on development
+        predictions = knn.predict(X_dev)
+        expectations = y_dev
 
-    # print performance metric score
-    print(metrics.f1_score(expectations, predictions))
+        # print performance metric score
+        print(metrics.f1_score(expectations, predictions))
 """
 
 #found best hyperparameter value to be 7.
