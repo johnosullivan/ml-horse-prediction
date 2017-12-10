@@ -14,7 +14,8 @@
 
 ## About Bet-On-Us
 
-Horse racing, once an event only for the elite and royales of society has become a everyday day occurance. The ancient Greek Olympics had events for both chariot and mounted horse racing. Since the ancient sport was conceived not much has changed but how bets are placed. Using today's machine learning, our team, <b>bet on us</b>, will be using from models from the skilearn library to determine what are the best features and horses to bet on.
+Horse racing, once an event only for the elite and royals of society has become a everyday day occurrence. The ancient Greek Olympics had events for both chariot and mounted horse racing. Since the ancient sport was conceived not much has changed but how bets are placed. Using today's machine learning, our team, bet on us, will be using from models from the ski learn library to determine what are the best features and horses to bet on.
+
 
 ## Prerequisites
 
