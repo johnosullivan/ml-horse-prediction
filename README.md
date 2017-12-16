@@ -66,3 +66,7 @@ All features will have a value of 0 or 1, the raw dataset can be found here: <a 
 
 ## Our Models
 The three different models used in this project were K-nearest neighbors, decision tree, and Support Vector Classification.
+
+## Results 
+
+Our team was able to successfully train each model and obtain results which helped us determine which model and features were optimal in predicting the winning horse of the race. Our SVC with features same track and last race produced an accuracy score of 73%. Our second SVC model worked with features horse ROI and last three race and achieved an accuracy of 72%. Our last two models K-neatest neighbors obtained an accuracy score of 71% and our last model which was a decision tree classifier also reached an accuracy score of 73%. 
